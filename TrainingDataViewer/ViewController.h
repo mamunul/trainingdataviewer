@@ -7,8 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController<NSWindowDelegate>
+
+
+@property (weak) IBOutlet NSImageView *imageView;
 
 
 @end
