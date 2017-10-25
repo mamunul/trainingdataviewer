@@ -8,12 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 #import <AppKit/AppKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
-@interface ViewController : NSViewController<NSWindowDelegate>
 
+@interface ViewController : NSViewController<NSWindowDelegate,NSMenuDelegate>
+
+@property (weak) IBOutlet NSButton *previousButton;
 
 @property (weak) IBOutlet NSImageView *imageView;
 
+@property (weak) IBOutlet NSButton *nextButton;
 
 @end
 

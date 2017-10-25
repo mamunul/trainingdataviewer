@@ -67,7 +67,7 @@
                                         </menuItem>
                                         <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
                                             <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
+                                                <action selector="openFile:" target="Ady-hI-5gd" id="GfI-XD-h20"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Open Recent" id="tXI-mr-wws">
@@ -689,12 +689,40 @@
                             <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eho-k9-dT0">
                                 <rect key="frame" x="140" y="35" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="yqS-JA-oB3"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" id="yqS-JA-oB3"/>
                             </imageView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a14-Qh-n3p">
+                                <rect key="frame" x="80" y="222" width="93" height="32"/>
+                                <buttonCell key="cell" type="push" title="Previous" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RHN-NM-fpr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="previousEvent:" target="XfG-lQ-9wD" id="e5w-DA-aes"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M6X-Lt-cyQ">
+                                <rect key="frame" x="325" y="222" width="69" height="32"/>
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CMD-Mb-Gor">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="nextEvent:" target="XfG-lQ-9wD" id="WBo-2U-tYz"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="M6X-Lt-cyQ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="UB1-8s-h3h"/>
+                            <constraint firstItem="a14-Qh-n3p" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="86" id="d9P-vm-gve"/>
+                            <constraint firstAttribute="trailing" secondItem="M6X-Lt-cyQ" secondAttribute="trailing" constant="92" id="nsn-7G-YmQ"/>
+                            <constraint firstItem="a14-Qh-n3p" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="od1-m2-bPB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="eho-k9-dT0" id="Qcf-mT-MqL"/>
+                        <outlet property="nextButton" destination="M6X-Lt-cyQ" id="6aS-nr-NCF"/>
+                        <outlet property="previousButton" destination="a14-Qh-n3p" id="Br0-qQ-xPU"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

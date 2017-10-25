@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C7EDFF51FA0824100A2D6CC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7EDFF41FA0824100A2D6CC /* AVFoundation.framework */; };
+		0C7EDFF71FA0834600A2D6CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7EDFF61FA0834600A2D6CC /* Foundation.framework */; };
 		0C997DC71F9F468300C4AFC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C997DC61F9F468300C4AFC1 /* AppDelegate.m */; };
 		0C997DCA1F9F468300C4AFC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C997DC91F9F468300C4AFC1 /* main.m */; };
-		0C997DCD1F9F468300C4AFC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C997DCC1F9F468300C4AFC1 /* ViewController.m */; };
+		0C997DCD1F9F468300C4AFC1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C997DCC1F9F468300C4AFC1 /* ViewController.mm */; };
 		0C997DCF1F9F468300C4AFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C997DCE1F9F468300C4AFC1 /* Assets.xcassets */; };
 		0C997DD21F9F468300C4AFC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C997DD01F9F468300C4AFC1 /* Main.storyboard */; };
 		0C997DDD1F9F468300C4AFC1 /* TrainingDataViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C997DDC1F9F468300C4AFC1 /* TrainingDataViewerTests.m */; };
 		0C997DE81F9F468300C4AFC1 /* TrainingDataViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C997DE71F9F468300C4AFC1 /* TrainingDataViewerUITests.m */; };
 		0C997DF71F9F478200C4AFC1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C997DF61F9F478200C4AFC1 /* AppKit.framework */; };
+		0CC8B3E61FA08EB00005F1A3 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8B3E51FA08EB00005F1A3 /* Landmark.m */; };
+		0CC8B3E81FA08FA10005F1A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC8B3E71FA08FA10005F1A3 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C7EDFF41FA0824100A2D6CC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0C7EDFF61FA0834600A2D6CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C997DC21F9F468300C4AFC1 /* TrainingDataViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingDataViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C997DC51F9F468300C4AFC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0C997DC61F9F468300C4AFC1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0C997DC91F9F468300C4AFC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C997DCB1F9F468300C4AFC1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0C997DCC1F9F468300C4AFC1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0C997DCC1F9F468300C4AFC1 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		0C997DCE1F9F468300C4AFC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C997DD11F9F468300C4AFC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C997DD31F9F468300C4AFC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +57,9 @@
 		0C997DE71F9F468300C4AFC1 /* TrainingDataViewerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingDataViewerUITests.m; sourceTree = "<group>"; };
 		0C997DE91F9F468300C4AFC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C997DF61F9F478200C4AFC1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0CC8B3E41FA08EB00005F1A3 /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
+		0CC8B3E51FA08EB00005F1A3 /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
+		0CC8B3E71FA08FA10005F1A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC8B3E81FA08FA10005F1A3 /* CoreGraphics.framework in Frameworks */,
+				0C7EDFF71FA0834600A2D6CC /* Foundation.framework in Frameworks */,
+				0C7EDFF51FA0824100A2D6CC /* AVFoundation.framework in Frameworks */,
 				0C997DF71F9F478200C4AFC1 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,11 +118,13 @@
 				0C997DC51F9F468300C4AFC1 /* AppDelegate.h */,
 				0C997DC61F9F468300C4AFC1 /* AppDelegate.m */,
 				0C997DCB1F9F468300C4AFC1 /* ViewController.h */,
-				0C997DCC1F9F468300C4AFC1 /* ViewController.m */,
+				0C997DCC1F9F468300C4AFC1 /* ViewController.mm */,
 				0C997DCE1F9F468300C4AFC1 /* Assets.xcassets */,
 				0C997DD01F9F468300C4AFC1 /* Main.storyboard */,
 				0C997DD31F9F468300C4AFC1 /* Info.plist */,
 				0C997DC81F9F468300C4AFC1 /* Supporting Files */,
+				0CC8B3E41FA08EB00005F1A3 /* Landmark.h */,
+				0CC8B3E51FA08EB00005F1A3 /* Landmark.m */,
 			);
 			path = TrainingDataViewer;
 			sourceTree = "<group>";
@@ -144,6 +158,9 @@
 		0C997DF51F9F478100C4AFC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CC8B3E71FA08FA10005F1A3 /* CoreGraphics.framework */,
+				0C7EDFF61FA0834600A2D6CC /* Foundation.framework */,
+				0C7EDFF41FA0824100A2D6CC /* AVFoundation.framework */,
 				0C997DF61F9F478200C4AFC1 /* AppKit.framework */,
 			);
 			name = Frameworks;
@@ -281,9 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C997DCD1F9F468300C4AFC1 /* ViewController.m in Sources */,
+				0C997DCD1F9F468300C4AFC1 /* ViewController.mm in Sources */,
 				0C997DCA1F9F468300C4AFC1 /* main.m in Sources */,
 				0C997DC71F9F468300C4AFC1 /* AppDelegate.m in Sources */,
+				0CC8B3E61FA08EB00005F1A3 /* Landmark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +528,7 @@
 				0C997DEE1F9F468300C4AFC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C997DEF1F9F468300C4AFC1 /* Build configuration list for PBXNativeTarget "TrainingDataViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +537,7 @@
 				0C997DF11F9F468300C4AFC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C997DF21F9F468300C4AFC1 /* Build configuration list for PBXNativeTarget "TrainingDataViewerUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +546,7 @@
 				0C997DF41F9F468300C4AFC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
