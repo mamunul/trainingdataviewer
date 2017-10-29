@@ -6,6 +6,7 @@
 //  Copyright © 2017 Mamunul. All rights reserved.
 //
 
+#import <opencv2/opencv.hpp>
 #import "ViewController.h"
 #import "Landmark.h"
 #include <functional>
@@ -129,18 +130,75 @@
 		
 		imageSize = img.size;
 	
-		_imageView.image = img;
-		
 		NSURL *ptsURL = [[imageURL URLByDeletingPathExtension] URLByAppendingPathExtension:@"pts"];
 
 		[self parsePoints:ptsURL];
-
-		[self viewPoints];
 		
+		float radius = 5.0;
+		
+		NSImage *im = [self drawAreaCircle:NSMakePoint(100, 100) centerRadius:50 image:img];
+		_imageView.image = im;
+		
+		
+
 	}
 
 }
 
+
+-(NSImage *)drawAreaCircle:(const NSPoint)center centerRadius:(const int)radious image:(NSImage *)src_image {
+	
+	
+	CGRect imgRect = CGRectMake(0, 0, src_image.size.width, src_image.size.height);
+	__block NSBitmapImageRep *offscreenRep = [[NSBitmapImageRep alloc]
+											  initWithBitmapDataPlanes:NULL
+											  pixelsWide:imgRect.size.width
+											  pixelsHigh:imgRect.size.height
+											  bitsPerSample:8
+											  samplesPerPixel:4
+											  hasAlpha:YES
+											  isPlanar:NO
+											  colorSpaceName:NSDeviceRGBColorSpace
+											  bitmapFormat:NSAlphaFirstBitmapFormat
+											  bytesPerRow:0
+											  bitsPerPixel:0];
+	NSGraphicsContext *graphicsContext = [NSGraphicsContext graphicsContextWithBitmapImageRep:offscreenRep];
+	[NSGraphicsContext saveGraphicsState];
+	[NSGraphicsContext setCurrentContext:graphicsContext];
+	CGContextRef contextRef = [[NSGraphicsContext currentContext] CGContext];
+	CFRetain(contextRef);
+	CGImageSourceRef source;
+	CFDataRef cfdRef = (__bridge CFDataRef)[src_image TIFFRepresentation];
+	source = CGImageSourceCreateWithData(cfdRef, NULL);
+	CGImageRef imgRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
+	CGContextDrawImage(contextRef, imgRect, imgRef);
+	CGImageRelease(imgRef);
+	
+	
+	
+	[[NSColor yellowColor] setStroke];
+	
+	
+	// Create our circle path
+	NSRect rect = NSMakeRect(center.x - radious / 2, imgRect.size.height - center.y - radious / 2, radious, radious);
+	NSBezierPath* circlePath = [NSBezierPath bezierPath];
+	[circlePath appendBezierPathWithOvalInRect: rect];
+	
+	// Outline and fill the path
+	[circlePath stroke];
+	
+	[NSGraphicsContext restoreGraphicsState];
+	CFRelease(contextRef);
+	NSImage *img = [[NSImage alloc] initWithSize:src_image.size] ;
+	[img addRepresentation:offscreenRep];
+	
+	
+	NSData *data = [offscreenRep representationUsingType: NSJPEGFileType properties: nil];
+//	[data writeToFile: @"/Users/mamunul/Documents/a.jpg" atomically: NO];
+	offscreenRep = nil;
+	return img;
+	
+}
 -(void)viewPoints{
 
 	dispatch_async(dispatch_get_main_queue(), ^{

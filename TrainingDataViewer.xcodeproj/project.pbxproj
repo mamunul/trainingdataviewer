@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C62A8FF1FA5F10700B36150 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C62A8FE1FA5F10700B36150 /* opencv2.framework */; };
 		0C7EDFF51FA0824100A2D6CC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7EDFF41FA0824100A2D6CC /* AVFoundation.framework */; };
 		0C7EDFF71FA0834600A2D6CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7EDFF61FA0834600A2D6CC /* Foundation.framework */; };
 		0C997DC71F9F468300C4AFC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C997DC61F9F468300C4AFC1 /* AppDelegate.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C62A8FE1FA5F10700B36150 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		0C7EDFF41FA0824100A2D6CC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0C7EDFF61FA0834600A2D6CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C997DC21F9F468300C4AFC1 /* TrainingDataViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingDataViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 				0CC8B3E81FA08FA10005F1A3 /* CoreGraphics.framework in Frameworks */,
 				0C7EDFF71FA0834600A2D6CC /* Foundation.framework in Frameworks */,
 				0C7EDFF51FA0824100A2D6CC /* AVFoundation.framework in Frameworks */,
+				0C62A8FF1FA5F10700B36150 /* opencv2.framework in Frameworks */,
 				0C997DF71F9F478200C4AFC1 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +118,7 @@
 		0C997DC41F9F468300C4AFC1 /* TrainingDataViewer */ = {
 			isa = PBXGroup;
 			children = (
+				0C62A8FE1FA5F10700B36150 /* opencv2.framework */,
 				0C997DC51F9F468300C4AFC1 /* AppDelegate.h */,
 				0C997DC61F9F468300C4AFC1 /* AppDelegate.m */,
 				0C997DCB1F9F468300C4AFC1 /* ViewController.h */,
@@ -440,6 +444,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TrainingDataViewer",
+				);
 				INFOPLIST_FILE = TrainingDataViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mamunul.test.TrainingDataViewer;
@@ -452,6 +460,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TrainingDataViewer",
+				);
 				INFOPLIST_FILE = TrainingDataViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mamunul.test.TrainingDataViewer;
